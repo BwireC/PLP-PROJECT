@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caissa's Palace</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chessboardjs@1.0.0/dist/chessboard.min.css">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            font-size: 20px;
+        }
+        header {
+            background-color: #4682b4;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-style: italic;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        main {
+            padding: 20px;
+        }
+        h2 {
+            color: #4682b4;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        p {
+            margin: 15px 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: #e0ffff;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #4682b4;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 16px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .chessboard {
+            text-align: center;
+            margin: 20px auto;
+        }
+        .social-media {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .social-media a {
+            margin: 0 10px;
+        }
+        .social-media img {
+            width: 32px;
+            height: 32px;
+        }
+        .section-title {
+            font-size: 28px;
+        }
+        .search-bar {
+            float: right;
+            margin-right: 20px;
+        }
+        .home-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px auto;
+            border: 5px solid #4682b4;
+            border-radius: 10px;
+        }
+        .content-section {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Caissa's Palace</h1>
+        <p>'Above all, Chess is a fight.'</p>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#mission">Mission</a>
+        <a href="#vision">Vision</a>
+        <a href="#offerings">What We Offer</a>
+        <a href="#play">Play</a>
+        <a href="#tournaments">Tournaments</a>
+        <a href="#advertisement">Advertisement</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <main class="container">
+        <section id="home" class="content-section">
+            <h2 class="section-title">Welcome to Caissa's Palace</h2>
+            <img src="https://hampshirechesshistory.co.uk/wp-content/uploads/2023/01/QUATRAINS.jpg" alt="Chess Image" class="home-image">
+            <p>Welcome to Caissa's Palace, where we merge the worlds of chess and programming. Our aim is to create a dynamic platform that not only teaches the art of chess but also integrates programming concepts through interactive chess applications and tutorials.</p>
+        </section>
+        <section id="about" class="content-section">
+            <h2 class="section-title">About Us</h2>
+            <p>Caissa's Palace is a sanctum for nurturing minds through the beautiful game of chess. We intend to start a chess revolution throughout Kenya and to the rest of the world.</p>
+            <h3 class="section-title">About the Creator</h3>
+            <p>Cyprian Bwire is a passionate chess player and web developer dedicated to combining the strategic depth of chess with the technological advancements of programming.</p>
+        </section>
+        <section id="mission" class="content-section">
+            <h2 class="section-title">Our Mission</h2>
+            <p>To promote the intellectual and cultural benefits of chess, making it accessible to everyone.</p>
+        </section>
+        <section id="vision" class="content-section">
+            <h2 class="section-title">Our Vision</h2>
+            <p>To create a vibrant community where chess enthusiasts can learn, compete, and grow.</p>
+        </section>
+        <section id="offerings" class="content-section">
+            <h2 class="section-title">What We Offer</h2>
+            <ul>
+                <li>Physical Chess Training for kids and beginners.</li>
+                <li>Online Chess Tutorials.</li>
+                <li>Chess Tournaments.</li>
+                <li>Chess Betting.</li>
+                <li>Conducive Chess Community.</li>
+            </ul>
+        </section>
+        <section id="play" class="content-section">
+            <h2 class="section-title">Play</h2>
+            <div id="board1" class="chessboard" style="width: 400px"></div>
+            <div id="board2" class="chessboard" style="width: 400px"></div>
+            <button id="startBtn">Start Position</button>
+            <button id="clearBtn">Clear Board</button>
+            <h3 class="section-title">Chess Concepts</h3>
+            <ol>
+                <li><b>Checkmate Patterns:</b> Techniques to deliver checkmate efficiently. Examples: Back-rank mate, Smothered mate.</li>
+                <li><b>How Pieces Move:</b> Understanding the movement of each piece. Example: Knights move in an L-shape, Bishops move diagonally.</li>
+                <li><b>Chess Gambits:</b> Opening strategies where a pawn is sacrificed. Example: King's Gambit, Queen's Gambit.</li>
+                <li><b>Chess Openings:</b> Initial moves that set up the board for the game. Example: Ruy López, Sicilian Defense.</li>
+                <li><b>Opening Theory:</b> Principles guiding the first moves of a game. Examples: Control the center, Develop pieces early.</li>
+            </ol>
+        </section>
+        <section id="tournaments" class="content-section">
+            <h2 class="section-title">Tournaments and Registration</h2>
+            <p>Join our exciting chess tournaments and register to compete against players from around the globe.</p>
+        </section>
+        <section id="advertisement" class="content-section">
+            <h2 class="section-title">Advertisement</h2>
+            <p>Explore opportunities to advertise your chess-related products and services with Caissa's Palace.</p>
+        </section>
+        <section id="contact" class="content-section">
+            <h2 class="section-title">Contact Us</h2>
+            <p>Email: abbacus17@gmail.com</p>
+            <p>Phone: 0719814089</p>
+        </section>
+    </main>
+    <footer>
+        <div class="social-media">
+            <a href="https://facebook.com"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+            <a href="https://twitter.com"><img src="https://upload.wikimedia.org/wikipedia/en/6/60/Twitter_Logo_as_of_2021.svg" alt="Twitter"></a>
+            <a href="https://instagram.com"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search..." style="padding: 6px; border-radius: 4px; border: 1px solid #ccc;">
+        </div>
+        <p>&copy; 2024 Caissa's Palace. All rights reserved.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chessboardjs@1.0.0/dist/chessboard.min.js"></script>
+    <script>
+        var board1 = Chessboard('board1', 'start');
+        var board2 = Chessboard('board2', 'start');
+
+        $('#startBtn').on('click', function() {
+            board1.start();
+            board2.start();
+        });
+
+        $('#clearBtn').on('click', function() {
+            board1.clear();
+            board2.clear();
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
